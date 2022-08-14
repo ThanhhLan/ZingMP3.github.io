@@ -61,7 +61,7 @@ html{
     max-width: 210px;
     width: 100%;
     padding-left: 35px;
-    max-height: 565px;
+    max-height: 575px;
     z-index: 100;
     overflow: hidden;
 }
@@ -183,7 +183,7 @@ html{
     position: relative;
     top: 0;
     left: 245px;
-    padding: 0 69px;
+    padding: 0 67px;
     background-color: var(--background-color);
     max-width: 1125px; 
     padding-bottom: 140px;
