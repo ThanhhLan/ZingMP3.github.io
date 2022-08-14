@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zing MP3 | Nghe tải nhạc chất lượng cao trên desktop, mobile và TV (Lan)</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/LOGO.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src ="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+</head>
+<body>
+    <div id="container" class="container">  
+          <!-- HEADER  -->
+        <div class="header">
+            <div class="header__logo">
+                <img src="./assets/img/ZingMP3logo.svg.png">
+            </div>
+            <div class="header__menu">
+                <div class="header__menu-songs--new">
+                    <div class="header__menu-item header__menu-item1 active">
+                        <i class="header__menu-icon fa-solid fa-icons"></i>
+                        <a><span class="header__menu-title">Khám phá</span></a>
+                    </div>
+                    <div class="header__menu-item header__menu-item1">
+                        <i class="header__menu-icon fa-solid fa-user"></i>                        
+                        <a><span class="header__menu-title">Cá nhân</span></a>
+                    </div>
+                    <div class="header__menu-item">
+                        <i class="header__menu-icon fa-solid fa-chart-line"></i>
+                        <a><span class="header__menu-title">Zingchart</span></a>
+                    </div>
+                    <div class="header__menu-item header__menu-radio js__toast">
+                        <i class="header__menu-icon fa-solid fa-radio"></i>
+                        <span class="header__menu-title header__menu-title-radio">Radio</span>
+                        <p class="header__radio-live">LIVE</p>
+                    </div>
+                    <div class="header__menu-item js__toast">
+                        <i class="header__menu-icon fa-solid fa-address-card"></i>
+                        <a><span class="header__menu-title">Theo dõi</span></a>
+                    </div>
+                </div>
+                <div class="split"></div>
+                
+                <div class="header__menu-wrap"  id="header__scroll">
+                    <div class="header__menu-songs--hot">
+                        <div class="header__menu-item js__toast">
+                            <i class="header__menu-icon fa-solid fa-record-vinyl"></i>
+                            <a><span class="header__menu-title">Nhạc mới</span></a>
+                        </div>
+    
+                        <div class="header__menu-item js__toast">
+                            <i class="header__menu-icon fa-brands fa-creative-commons-nd"></i>
+                            <a><span class="header__menu-title">Thể loại</span></a>
+                        </div>
+                        <div class="header__menu-item js__toast">
+                            <i class="header__menu-icon fa-solid fa-star"></i>
+                            <a><span class="header__menu-title">Top 100</span></a>
+                        </div>
+                        <div class="header__menu-item js__toast">
+                            <i class="header__menu-icon fa-brands fa-youtube"></i>
+                            <a><span class="header__menu-title">MV</span></a>
+                        </div>
+                        <div class="header__menu-entertainment  js__toast mt-18">
+                            <p class="entertainment-content">Nghe nhạc không quảng cáo cùng kho nhạc VIP</p>
+                            <button class="btn-upgrade" type="button">NÂNG CẤP VIP</button>
+                        </div>
+                    </div>
+    
+                    <div class="split"></div>
+                    <div class="header__libraries">
+                        <h2 class="header__libraries-title">THƯ VIỆN</h2>
+                        <div class="header__libraries-lists">
+                            <div class="header__menu-item js__toast">
+                                <i class="header__menu-icon header__menu-icon--library fa-solid fa-music" style="background-color: rgb(30, 192, 233);"></i>
+                                <a><span class="header__menu-title">Bài hát</span></a>
+                            </div>
+                            <div class="header__menu-item js__toast">
+                                <i class="header__menu-icon header__menu-icon--library fa-solid fa-list"  style="background-color: rgb(30, 233, 91);"></i>
+                                <a><span class="header__menu-title">Playlist</span></a>
+                            </div>
+                            <div class="header__menu-item js__toast">
+                                <i class="header__menu-icon header__menu-icon--library fa-solid fa-clock"  style="background-color: rgb(214, 183, 80);"></i>
+                                <a><span class="header__menu-title">Gần đây</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- BODY -->
+        <div class="body">
+            <!-- Navigations -->
+            <div class="navigation">
+                <div class="search__container">
+                    <div class="navigation__arrow">
+                        <i class="fa-solid fa-arrow-left navigation__arrow--none" style="margin-left: -10px;"></i>
+                        <i class="fa-solid fa-arrow-right" style="padding-left: 20px;"></i>
+                    </div>
+                    <div class="search__box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" class="search" placeholder="Tìm kiếm bài hát, nghệ sĩ, lời bài hát..." autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="function">
+                    <div class="function__item js__toast">
+                        <i class="function__icon fa-solid fa-archway" style="color: rgb(126, 218, 210);"></i>
+                        <p class="function__comment">Chủ đề</p>
+                    </div>
+
+                    <div class="function__item js__toast">
+                        <i class="function__icon fa-solid fa-fire"style="color: rgb(206, 88, 52);"></i>
+                        <p class="function__comment">Nâng cấp VIP</p>
+                    </div>
+
+                    <div class="function__item js__toast">
+                        <i class="function__icon fa-solid fa-upload" style="color: rgb(146, 221, 103);"></i>
+                        <p class="function__comment">Tải lên</p>
+                    </div>
+
+                    <div class="function__item js__toast">
+                        <i class="function__icon fa-solid fa-gear" style="color: rgb(194, 154, 240);"></i>
+                        <p class="function__comment">Cài đặt</p>
+                    </div>
+                    <div class="function__item js__toast">
+                        <i class="function__icon fa-solid fa-user" style="background-color: rgb(162, 177, 192);"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Toast Message -->
+            <div id="toast">
+                <!-- <div class="toast">
+                    <div class="toast__icon">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+                    <div class="toast__body">
+                        <p class="toast__msg">Chức năng này đang xử lý, vui lòng quay lại sau!</p>
+                    </div>
+                    <div class="toast__close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- ====== Discover ====== -->
+            <div class="body-item discover active">
+                
+                <!-- Slide -->
+                <div class="slides">                
+                    <div class="slide__container">
+                        <div class="slide__item active">
+                            <img src="./assets/img/slide1 (1).jpg"  class="slide__img">
+                        </div>
+                    
+                        <div class="slide__item active">
+                            <img src="./assets/img/slide2.jpg" alt="" class="slide__img">
+                        </div>
+                    
+                        <div class="slide__item active">
+                            <img src="./assets/img/slide3.jpg" alt="" class="slide__img">
+                        </div>   
+
+                        <div class="slide__item">
+                            <img src="./assets/img/slide4.jpg" alt="" class="slide__img">
+                        </div>   
+                        <div class="slide__item">
+                            <img src="./assets/img/slide5.jpg" alt="" class="slide__img">
+                        </div>   
+                        <div class="slide__item">
+                            <img src="./assets/img/slide6.jpg" alt="" class="slide__img">
+                        </div> 
+                    </div>  
+                    <div class="slide__arrow">
+                        <i class="arrow--left fa-solid fa-angle-left"></i>
+                        <i class="arrow--right fa-solid fa-angle-right"></i>
+                    </div> 
+                </div>
+
+                <!-- Banner -->
+                <div class="banner">
+                    <img src="./assets/img/banner (1).jpg" alt="" class="banner__img">
+                </div>
+
+                <!-- Maybe you want to hear -->
+                <div class="maybe--hear choices mt-50">
+                    <h2 class="mb-25 title-header">Có Thể Bạn Muốn Nghe</h2>
+                    <div class="lists-choice mb-25">
+                    <div class="grid row">
+                            <div class="choice-item">
+                                <div class="choice-link--img">
+                                    <a><img class="choice-img" src="./assets/img/Maybe1.jpg"></img></a>
+                                    <div class="choice-hover">
+                                        <i class="fa-solid fa-heart"></i>
+                                        <i class="fa-solid fa-circle-play"></i>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="choice-info">
+                                    <a href="" class="choice-title-link">
+                                        <h3 class="choice-title">Dance Pop Today</h3>
+                                    </a>
+                                    <p class="choice-description">Mabel, Becky Hill, Sigrid, Ellie Goulding 2K người yêu thích</p>
+                                </div>
+                            </div>
+
+                            <div class="choice-item">
+                                <div class="choice-link--img">
+                                    <a><img class="choice-img" src="./assets/img/Maybe2.jpg"></img></a>
+                                    <div class="choice-hover">
+                                        <i class="fa-solid fa-heart"></i>
+                                        <i class="fa-solid fa-circle-play"></i>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="choice-info">
+                                    <a href="" class="choice-title-link">
+                                        <h3 class="choice-title">Rap Việt cũ mà hay</h3>
+                                    </a>
+                                    <p class="choice-description">Rhymastic, LK, Yanbi, Kimmese 22K người thích</p>
+                                </div>
+                            </div>
+
+                            <div class="choice-item">
+                                <div class="choice-link--img">
+                                    <a><img class="choice-img" src="./assets/img/Maybe3.jpg"></img></a>
+                                    <div class="choice-hover">
+                                        <i class="fa-solid fa-heart"></i>
+                                        <i class="fa-solid fa-circle-play"></i>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="choice-info">
+                                    <a href="" class="choice-title-link">
+                                        <h3 class="choice-title">Top 100 EDM</h3>
+                                    </a>
+                                    <p class="choice-description">Thả mình cùng những giai điệu V-Pop nhẹ nhàng</p>
+                                </div>
+                            </div>
+
+                            <div class="choice-item">
+                                <div class="choice-link--img">
+                                    <a><img class="choice-img" src="./assets/img/Maybe4.jpg"></img></a>
+                                    <div class="choice-hover">
+                                        <i class="fa-solid fa-heart"></i>
+                                        <i class="fa-solid fa-circle-play"></i>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="choice-info">
+                                    <a href="" class="choice-title-link">
+                                        <h3 class="choice-title">10s Pop Hits</h3>
+                                    </a>
+                                    <p class="choice-description">Katy Perry, Taylor Swift, Justin Bieber, Ariana Grand 2K người yêu thích</p>
+                                </div>
+                            </div>
+
+                            <div class="choice-item">
+                                <div class="choice-link--img">
+                                    <a><img class="choice-img" src="./assets/img/Maybe5.jpg"></img></a>
+                                    <div class="choice-hover">
+                                        <i class="fa-solid fa-heart"></i>
+                                        <i class="fa-solid fa-circle-play"></i>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="choice-info">
+                                    <a href="" class="choice-title-link">
+                                        <h3 class="choice-title">Rock 50: Zing Choice</h3>
+                                    </a>
+                                    <p class="choice-description">Nothing But Thieves, Bức Tường, 828 nguoiwf yêu thích</p>
+                                </div>
+                            </div>
+                            
+                            
+                    </div>
+                    </div>
+                </div>
+
+                <!-- New release -->
+                <div class="new__release mb-25 mt-50">
+                    <h2 class="mb-25 title-header">Mới Phát Hành</h2>
+                    <div class="new__release-title--wrap mb-25">
+                        <h3 class="new__release-title active">BÀI HÁT</h3>
+                        <h3 class="new__release-title">ALBUM</h3>
+                    </div>
+                    <div class="new__release-lists-wrap">
+                        <div class="tab-pane active">
+                            <div class="grid row">
+                                                
+                                <div class="mb-25 new__release-item-wrap">                               
+                                    <div class="new__release-item--song">
+                                        <img src="./assets/img/new_song1.jpg" alt="" class="new__release-item--img">
+                                        <div class="new__release-item--info">
+                                            <h4 class="new__release-song--name">Chuyện Về Người Con Gái</h4>
+                                            <p class="new__release-singer--name">Phương Thanh</p>
+                                        </div>
+                                    </div>
+                                    <div class="new__release-item--hover">
+                                        <i class="icon-play fa-solid fa-play"></i>
+                                        <i class="icon-ellipsis fa-solid fa-ellipsis"></i>
+                                    </div>   
+                                </div>
+        
+                                <div class="mb-25 new__release-item-wrap">                              
+                                    <div class="new__release-item--song">
+                                        <img src="./assets/img/new_song2.jpg" alt="" class="new__release-item--img">
+                                        <div class="new__release-item--info">
+                                            <h4 class="new__release-song--name">Mặt Trời Khóc</h4>
+                                            <p class="new__release-singer--name">Emcee L, Orange</p>
+                                        </div>
+                                    </div>
+                                    <div class="new__release-item--hover">
+                                        <i class="icon-play fa-solid fa-play"></i>
+                                        <i class="icon-ellipsis fa-solid fa-ellipsis"></i>
+                                    </div>                                
+                                </div>
+        
+                                <div class="mb-25 new__release-item-wrap">                               
+                                    <div class="new__release-item--song">
+                                        <img src="./assets/img/new_song3.jpg" alt="" class="new__release-item--img">
+                                        <div class="new__release-item--info">
+                                            <h4 class="new__release-song--name">Stay With Me</h4>
+                                            <p class="new__release-singer--name">Calvin Harris, Justin Timberlake</p>
+                                        </div>
+                                    </div>
+                                    <div class="new__release-item--hover">
+                                        <i class="icon-play fa-solid fa-play"></i>
+                                        <i class="icon-ellipsis fa-solid fa-ellipsis"></i>
+                                    </div>   
+                                </div>
+        
+                                <div class="mb-25 new__release-item-wrap">                                
+                                    <div class="new__release-item--song">
+                                        <img src="./assets/img/new_song4.jpg" alt="" class="new__release-item--img">
+                                        <div class="new__release-item--info">
+                                            <h4 class="new__release-song--name">Loop</h4>
+                                            <p class="new__release-singer--name">Martin Garrix</p>
+                                        </div>
+                                    </div>
+                                    <div class="new__release-item--hover">
+                                        <i class="icon-play fa-solid fa-play"></i>
+                                        <i class="icon-ellipsis fa-solid fa-ellipsis"></i>
+                                    </div>                         
+                                </div>
+
+                                <div class="mb-25 new__release-item-wrap">                                
+                                    <div class="new__release-item--song">
+                                        <img src="./assets/img/new_song5.jpg" alt="" class="new__release-item--img">
+                                        <div class="new__release-item--info">
+                                            <div class="song__vip-wrap song__vip">
+                                                <h4 class="new__release-song--name">One Day Less</h4>
+                                                <span class="song_vip-gift">VIP</span>
+                                            </div>
+                                            <p class="new__release-singer--name">Anson Seabra</p>
+                                        </div>
+                                    </div>
+                                    <div class="new__release-item--hover">
+                                        <i class="icon-play fa-solid fa-play"></i>
+                                        <i class="icon-ellipsis fa-solid fa-ellipsis"></i>
+                                    </div>                         
+                                </div>
+
+                                <div class="mb-25 new__release-item-wrap">                                
+                                    <div class="new__release-item--song">
+                                        <img src="./assets/img/new_song7.jpg" alt="" class="new__release-item--img">
+                                        <div class="new__release-item--info">
+                                            <div class="song__vip-wrap song__vip">
+                                                <h4 class="new__release-song--name">Vì Mẹ Anh Bắt Chia Tay</h4>
+                                                <span class="song_vip-gift">VIP</span>
+                                            </div>
+                                            <p class="new__release-singer--name">Miu Lê, Karik</p>
+                                        </div>
+                                    </div>
+                                    <div class="new__release-item--hover">
+                                        <i class="icon-play fa-solid fa-play"></i>
+                                        <i class="icon-ellipsis fa-solid fa-ellipsis"></i>
+                                    </div>                         
+                                </div>
+                            
+                                <div class="mb-25 new__release-item-wrap">                                
+                                    <div class="new__release-item--song">
+                                        <img src="./assets/img/new_song6.jpg" alt="" class="new__release-item--img">
+                                        <div class="new__release-item--info">
+                                            <div class="song__vip-wrap song__vip">
+                                                <h4 class="new__release-song--name">Alright</h4>
+                                                <span class="song_vip-gift">VIP</span>
+                                            </div>
+                                            <p class="new__release-singer--name">Sam Fender</p>
+                                        </div>
+                                    </div>
+                                    <div class="new__release-item--hover">
+                                        <i class="icon-play fa-solid fa-play"></i>
+                                        <i class="icon-ellipsis fa-solid fa-ellipsis"></i>
+                                    </div>                         
+                                </div>
+
+                                <div class="mb-25 new__release-item-wrap">                                
+                                    <div class="new__release-item--song">
+                                        <img src="./assets/img/new_song9.jpg" alt="" class="new__release-item--img">
+                                        <div class="new__release-item--info">
+                                            <div class="song__vip-wrap song__vip">
+                                                <h4 class="new__release-song--name">Jimmy Cooks</h4>
+                                                <span class="song_vip-gift">VIP</span>
+                                            </div>
+                                            <p class="new__release-singer--name">Drake</p>
+                                        </div>
+                                    </div>
+                                    <div class="new__release-item--hover">
+                                        <i class="icon-play fa-solid fa-play"></i>
+                                        <i class="icon-ellipsis fa-solid fa-ellipsis"></i>
+                                    </div>                         
+                                </div>
+
+                                <div class="mb-25 new__release-item-wrap">                                
+                                    <div class="new__release-item--song">
+                                        <img src="./assets/img/new_release8.png" alt="" class="new__release-item--img">
+                                        <div class="new__release-item--info">
+                                            <div class="song__vip-wrap song__vip">
+                                                <h4 class="new__release-song--name">As It Was</h4>
+                                                <span class="song_vip-gift">VIP</span>
+                                            </div>
+                                            <p class="new__release-singer--name">Harry Styles</p>
+                                        </div>
+                                    </div>
+                                    <div class="new__release-item--hover">
+                                        <i class="icon-play fa-solid fa-play"></i>
+                                        <i class="icon-ellipsis fa-solid fa-ellipsis"></i>
+                                    </div>                         
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane">
+                            <div class="grid row">
+                                <div class="mb-25 new__release-item-wrap">
+                                    <div class="new__release-item--album">
+                                        <div class="album-img-wrap">
+                                            <img src="./assets/img/CD.png" alt="" class="album-img-disk">
+                                            <img src="./assets/img/album1.png" alt="" class="album-img-song">
+                                        </div>
+                                        <div class="new__release-item--info mt-18">
+                                            <h4 class="new__release-song--name">Slowed (EP)</h4>
+                                            <p class="new__release-singer--name">Alan Walker</p>
+                                        </div>
+                                    </div>
+                                    <div class="new__release-item--hover new__release-album--hover">
+                                        <i class="icon-play icon-play--album fa-solid fa-play"></i>
+                                        <i class="icon-ellipsis fa-solid fa-ellipsis"></i>
+                                    </div>  
+                                </div>
+
+                                <div class="mb-25 new__release-item-wrap">
+                                    <div class="new__release-item--album">
+                                        <div class="album-img-wrap">
+                                            <img src="./assets/img/CD.png" alt="" class="album-img-disk">
+                                            <img src="./assets/img/album2.jpg" alt="" class="album-img-song">
+                                        </div>
+                                        <div class="new__release-item--info mt-18">
+                                            <h4 class="new__release-song--name">Self Explanatory</h4>
+                                            <p class="new__release-singer--name">Ne - Yo</p>
+                                        </div>
+                                    </div>
+                                    <div class="new__release-item--hover new__release-album--hover">
+                                        <i class="icon-play icon-play--album fa-solid fa-play"></i>
+                                        <i class="icon-ellipsis fa-solid fa-ellipsis"></i>
+                                    </div>  
+                                </div>
+
+                                <div class="mb-25 new__release-item-wrap">
+                                    <div class="new__release-item--album">
+                                        <div class="album-img-wrap">
+                                            <img src="./assets/img/CD.png" alt="" class="album-img-disk">
+                                            <img src="./assets/img/album3.jpg" alt="" class="album-img-song">
+                                        </div>
+                                        <div class="new__release-item--info mt-18">
+                                            <h4 class="new__release-song--name">Email I can't send</h4>
+                                            <p class="new__release-singer--name">Sabrina Carpenter</p>
+                                        </div>
+                                    </div>
+                                    <div class="new__release-item--hover new__release-album--hover">
+                                        <i class="icon-play icon-play--album fa-solid fa-play"></i>
+                                        <i class="icon-ellipsis fa-solid fa-ellipsis"></i>
+                                    </div>  
+                                </div>
+
+                                <div class="mb-25 new__release-item-wrap">
+                                    <div class="new__release-item--album">
+                                        <div class="album-img-wrap">
+                                            <img src="./assets/img/CD.png" alt="" class="album-img-disk">
+                                            <img src="./assets/img/album4.jpg" alt="" class="album-img-song">
+                                        </div>
+                                        <div class="new__release-item--info mt-18">
+                                            <h4 class="new__release-song--name">About Last Night</h4>
+                                            <p class="new__release-singer--name">Mabel</p>
+                                        </div>
+                                    </div>
+                                    <div class="new__release-item--hover new__release-album--hover">
+                                        <i class="icon-play icon-play--album fa-solid fa-play"></i>
+                                        <i class="icon-ellipsis fa-solid fa-ellipsis"></i>
+                                    </div>  
+                                </div>
+
+                                <div class="mb-25 new__release-item-wrap">
+                                    <div class="new__release-item--album">
+                                        <div class="album-img-wrap">
+                                            <img src="./assets/img/CD.png" alt="" class="album-img-disk">
+                                            <img src="./assets/img/album5.jpg" alt="" class="album-img-song">
+                                        </div>
+                                        <div class="new__release-item--info mt-18">
+                                            <h4 class="new__release-song--name">Aftershock</h4>
+                                            <p class="new__release-singer--name">Alexander 23</p>
+                                        </div>
+                                    </div>
+                                    <div class="new__release-item--hover new__release-album--hover">
+                                        <i class="icon-play icon-play--album fa-solid fa-play"></i>
+                                        <i class="icon-ellipsis fa-solid fa-ellipsis"></i>
+                                    </div>  
+                                </div>
+
+                                <div class="mb-25 new__release-item-wrap">
+                                    <div class="new__release-item--album">
+                                        <div class="album-img-wrap">
+                                            <img src="./assets/img/CD.png" alt="" class="album-img-disk">
+                                            <img src="./assets/img/album6.jpg" alt="" class="album-img-song">
+                                        </div>
+                                        <div class="new__release-item--info mt-18">
+                                            <h4 class="new__release-song--name">The Wave Of9</h4>
+                                            <p class="new__release-singer--name">SF9</p>
+                                        </div>
+                                    </div>
+                                    <div class="new__release-item--hover new__release-album--hover">
+                                        <i class="icon-play icon-play--album fa-solid fa-play"></i>
+                                        <i class="icon-ellipsis fa-solid fa-ellipsis"></i>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Choice -->
+                <div class="choices mt-50">
+                    <h2 class="mb-25 title-header">Lựa Chọn Hôm Nay</h2>
+                    <div class="lists-choice mb-25">
+                    <div class="grid row">
+                            <div class="choice-item">
+                                <div class="choice-link--img">
+                                    <a><img class="choice-img" src="./assets/img/choice1.jpg"></img></a>
+                                    <div class="choice-hover">
+                                        <i class="fa-solid fa-heart"></i>
+                                        <i class="fa-solid fa-circle-play"></i>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="choice-info">
+                                    <a href="" class="choice-title-link">
+                                        <h3 class="choice-title">K-Pop Happy Whistle</h3>
+                                    </a>
+                                    <p class="choice-description">Cuốn theo những giai điệu húyt sáo độc đáo trong K-Pop Happy Whistle</p>
+                                </div>
+                            </div>
+
+                            <div class="choice-item">
+                                <div class="choice-link--img">
+                                    <a><img class="choice-img" src="./assets/img/choice2.jpg"></img></a>
+                                    <div class="choice-hover">
+                                        <i class="fa-solid fa-heart"></i>
+                                        <i class="fa-solid fa-circle-play"></i>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="choice-info">
+                                    <a href="" class="choice-title-link">
+                                        <h3 class="choice-title">Nhạc TikTok hay 2022</h3>
+                                    </a>
+                                    <p class="choice-description">Cùng thư giãn với những bản nhạc TikTok hay nhất 2022</p>
+                                </div>
+                            </div>
+
+                            <div class="choice-item">
+                                <div class="choice-link--img">
+                                    <a><img class="choice-img" src="./assets/img/choice3.jpg"></img></a>
+                                    <div class="choice-hover">
+                                        <i class="fa-solid fa-heart"></i>
+                                        <i class="fa-solid fa-circle-play"></i>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="choice-info">
+                                    <a href="" class="choice-title-link">
+                                        <h3 class="choice-title">Nhẹ nhàng cùng V-Pop</h3>
+                                    </a>
+                                    <p class="choice-description">Thả mình cùng những giai điệu V-Pop nhẹ nhàng</p>
+                                </div>
+                            </div>
+
+                            <div class="choice-item">
+                                <div class="choice-link--img">
+                                    <a><img class="choice-img" src="./assets/img/choice4.jpg"></img></a>
+                                    <div class="choice-hover">
+                                        <i class="fa-solid fa-heart"></i>
+                                        <i class="fa-solid fa-circle-play"></i>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="choice-info">
+                                    <a href="" class="choice-title-link">
+                                        <h3 class="choice-title">Summer Hits</h3>
+                                    </a>
+                                    <p class="choice-description">Feel the heat cùng những bản Hits Summer nóng bỏng</p>
+                                </div>
+                            </div>
+
+                            <div class="choice-item">
+                                <div class="choice-link--img">
+                                    <a><img class="choice-img" src="./assets/img/choice5.jpg"></img></a>
+                                    <div class="choice-hover">
+                                        <i class="fa-solid fa-heart"></i>
+                                        <i class="fa-solid fa-circle-play"></i>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="choice-info">
+                                    <a href="" class="choice-title-link">
+                                        <h3 class="choice-title">Hot Hits VietNam</h3>
+                                    </a>
+                                    <p class="choice-description">Hits nổi nhất tại Việt Nam từ Đông sang Tây có đủ các thể loại</p>
+                                </div>
+                            </div>
+                            
+                            
+                    </div>
+                    </div>
+                </div>
+
+                <!-- ZingChart -->     
+                <div class="mb-25 chart__wrapper mt-50">
+                    <h2 class="mb-25 title-header">#Zingchart</h2>
+                    <canvas id="line_chart"></canvas>
+                </div>
+                <div class="zingchart-week">
+                    <div class="zingchart-week--item">
+                        <img src="./assets/img/zingchart_tuần_VN.jpg" alt="" class="zingchart-week--img">
+                    </div>
+                    <div class="zingchart-week--item">
+                        <img src="./assets/img/zingchart_tuần_US.jpg" alt="" class="zingchart-week--img">
+                    </div>
+                    <div class="zingchart-week--item">
+                        <img src="./assets/img/zingchart_tuần_KPop.jpg" alt="" class="zingchart-week--img">
+                    
+                    </div>
+                </div>
+
+                <!-- Radio -->
+                <div class="radio-container mt-50">
+                    <h2 class="mb-25 title-header">Radio Nổi Bật</h2>
+                    <div class="radio-list">
+
+                        <div class="radio-item">
+                            <div class="radio-image-show">
+                                <div class="image-big-wrap">
+                                    <img src="./assets/img/Radio1.png" alt="" class="radio-img--big">
+                                </div>
+                                <img src="./assets/img/radio1_small.jpg" alt="" class="radio-img-small">
+                                <span class="radio-live">LIVE</span>
+                                <div class="radio-image-hover">
+                                    <i class="icon-play--radio fa-solid fa-play"></i>
+                                </div>
+                            </div>                            
+                        
+
+                            <div class="radio-info">
+                                <h3 class="radio-info-title">XONE Radio</h3>
+                                <p class="radio-listening">593 đang nghe</p>
+                            </div>
+                        </div>
+
+                        <div class="radio-item">
+                            <div class="radio-image-show">
+                                <div class="image-big-wrap">
+                                    <img src="./assets/img/Radio2.png" alt="" class="radio-img--big">
+                                </div>
+                                <img src="./assets/img/radio2_small.jpg" alt="" class="radio-img-small">
+                                <span class="radio-live">LIVE</span>
+                                <div class="radio-image-hover">
+                                    <i class="icon-play--radio fa-solid fa-play"></i>
+                                </div>
+                            </div>                            
+                    
+
+                            <div class="radio-info">
+                                <h3 class="radio-info-title">V-POP</h3>
+                                <p class="radio-listening">1K đang nghe</p>
+                            </div>
+                        </div>
+
+                        <div class="radio-item">
+                            <div class="radio-image-show">
+                                <div class="image-big-wrap">
+                                    <img src="./assets/img/Radio3.jpg" alt="" class="radio-img--big">
+                                </div>
+                                <img src="./assets/img/radio3_small.jpg" alt="" class="radio-img-small">
+                                <span class="radio-live">LIVE</span>
+                                <div class="radio-image-hover">
+                                    <i class="icon-play--radio fa-solid fa-play"></i>
+                                </div>
+                            </div>                            
+                    
+
+                            <div class="radio-info">
+                                <h3 class="radio-info-title">Chạm</h3>
+                                <p class="radio-listening">281 đang nghe</p>
+                            </div>
+                        </div>
+
+                        <div class="radio-item">
+                            <div class="radio-image-show">
+                                <div class="image-big-wrap">
+                                    <img src="./assets/img/Radio4.jpg" alt="" class="radio-img--big">
+                                </div>
+                                <img src="./assets/img/radio4_small.jpg" alt="" class="radio-img-small">
+                                <span class="radio-live">LIVE</span>
+                                <div class="radio-image-hover">
+                                    <i class="icon-play--radio fa-solid fa-play"></i>
+                                </div>
+                            </div>                            
+                    
+
+                            <div class="radio-info">
+                                <h3 class="radio-info-title">On Air</h3>
+                                <p class="radio-listening">68 đang nghe</p>
+                            </div>
+                        </div>
+
+                        <div class="radio-item">
+                            <div class="radio-image-show">
+                                <div class="image-big-wrap">
+                                    <img src="./assets/img/Radio5.jpg" alt="" class="radio-img--big">
+                                </div>
+                                <img src="./assets/img/radio5_small.jpg" alt="" class="radio-img-small">
+                                <span class="radio-live">LIVE</span>
+                                <div class="radio-image-hover">
+                                    <i class="icon-play--radio fa-solid fa-play"></i>
+                                </div>
+                            </div>                            
+                    
+
+                            <div class="radio-info">
+                                <h3 class="radio-info-title">Bolero</h3>
+                                <p class="radio-listening">599 đang nghe</p>
+                            </div>
+                        </div>
+
+                        <div class="radio-item">
+                            <div class="radio-image-show">
+                                <div class="image-big-wrap">
+                                    <img src="./assets/img/Radio6.jpg" alt="" class="radio-img--big">
+                                </div>
+                                <img src="./assets/img/radio6_small.jpg" alt="" class="radio-img-small">
+                                <span class="radio-live">LIVE</span>
+                                <div class="radio-image-hover">
+                                    <i class="icon-play--radio fa-solid fa-play"></i>
+                                </div>
+                            </div>                            
+                    
+
+                            <div class="radio-info">
+                                <h3 class="radio-info-title">US-UK</h3>
+                                <p class="radio-listening">176 đang nghe</p>
+                            </div>
+                        </div>
+
+                        <div class="radio-item">
+                            <div class="radio-image-show">
+                                <div class="image-big-wrap">
+                                    <img src="./assets/img/Radio7.jpg" alt="" class="radio-img--big">
+                                </div>
+                                <img src="./assets/img/Radio7.jpg" alt="" class="radio-img-small">
+                                <span class="radio-live">LIVE</span>
+                                <div class="radio-image-hover">
+                                    <i class="icon-play--radio fa-solid fa-play"></i>
+                                </div>
+                            </div>                            
+                    
+
+                            <div class="radio-info">
+                                <h3 class="radio-info-title">K-POP</h3>
+                                <p class="radio-listening">74 đang nghe</p>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+
+                <!-- Favorite Artist -->
+                <div class="favorite-artist-container mt-50">
+                    <h2 class="mb-25 title-header">Nghệ Sĩ Yêu Thích</h2>
+                    <div class="favorite-artist-list">
+                        <div class="favorite-artist-item">
+                            <div class="favorite-artist-img-wrap">
+                                <img src="./assets/img/artist_A.jpg" alt="" class="favorite-artist-img">
+                            </div>
+                            <i class="icon-play--artist fa-solid fa-play"></i>
+                            <div class="favorite-artist-info">
+                                <h2 class="favorite-artist-name">Karik</h2>
+                                <div class="favorite-artist-songs">
+                                    <img src="./assets/img/artist_A1.png" alt="" class="favorite-artist-songs--img">
+                                    <img src="./assets/img/artist_A2.jpg" alt="" class="favorite-artist-songs--img">
+                                    <img src="./assets/img/artist_A3.jpg" alt="" class="favorite-artist-songs--img">
+                                </div>
+                                                               
+                            </div>
+                        </div>
+
+                        <div class="favorite-artist-item">
+                            <div class="favorite-artist-img-wrap">
+                                <img src="./assets/img/artist_B.jpg" alt="" class="favorite-artist-img">
+                            </div>
+                            <i class="icon-play--artist fa-solid fa-play"></i>
+                            <div class="favorite-artist-info">
+                                <h2 class="favorite-artist-name">MIN</h2>
+                                <div class="favorite-artist-songs">
+                                    <img src="./assets/img/artist_B1.jpg" alt="" class="favorite-artist-songs--img">
+                                    <img src="./assets/img/artist_B2.jpg" alt="" class="favorite-artist-songs--img">
+                                    <img src="./assets/img/artist_B3.jpg" alt="" class="favorite-artist-songs--img">
+                                </div>
+                                                               
+                            </div>
+                        </div>
+
+                        <div class="favorite-artist-item">
+                            <div class="favorite-artist-img-wrap">
+                                <img src="./assets/img/artist_C.jpg" alt="" class="favorite-artist-img">
+                            </div>
+                            <i class="icon-play--artist fa-solid fa-play"></i>
+                            <div class="favorite-artist-info">
+                                <h2 class="favorite-artist-name">Miu Lê</h2>
+                                <div class="favorite-artist-songs">
+                                    <img src="./assets/img/artist_C1.jpg" alt="" class="favorite-artist-songs--img">
+                                    <img src="./assets/img/artist_C2.jpg" alt="" class="favorite-artist-songs--img">
+                                    <img src="./assets/img/artist_A1.png" alt="" class="favorite-artist-songs--img">
+                                </div>
+                                                               
+                            </div>
+                        </div>
+
+                        <div class="favorite-artist-item">
+                            <div class="favorite-artist-img-wrap">
+                                <img src="./assets/img/artist_D.jpg" alt="" class="favorite-artist-img">
+                            </div>
+                            <i class="icon-play--artist fa-solid fa-play"></i>
+                            <div class="favorite-artist-info">
+                                <h2 class="favorite-artist-name">Khắc Việt</h2>
+                                <div class="favorite-artist-songs">
+                                    <img src="./assets/img/artist_C1.jpg" alt="" class="favorite-artist-songs--img">
+                                    <img src="./assets/img/artist_B3.jpg" alt="" class="favorite-artist-songs--img">
+                                    <img src="./assets/img/artist_B2.jpg" alt="" class="favorite-artist-songs--img">
+                                </div>
+                                                               
+                            </div>
+                        </div>
+
+                        <div class="favorite-artist-item">
+                            <div class="favorite-artist-img-wrap">
+                                <img src="./assets/img/artist_E.jpg" alt="" class="favorite-artist-img">
+                            </div>
+                            <i class="icon-play--artist fa-solid fa-play"></i>
+                            <div class="favorite-artist-info">
+                                <h2 class="favorite-artist-name">Hồ Quang Hiếu</h2>
+                                <div class="favorite-artist-songs">
+                                    <img src="./assets/img/artist_A3.jpg" alt="" class="favorite-artist-songs--img">
+                                    <img src="./assets/img/artist_C2.jpg" alt="" class="favorite-artist-songs--img">
+                                    <img src="./assets/img/artist_B2.jpg" alt="" class="favorite-artist-songs--img">
+                                </div>
+                                                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partner (footer) -->
+                <div class="partner mt-50">
+                    <h2 class="partner-title mb-25">ĐỐI TÁC ÂM NHẠC</h2>
+                    <div class="partner-list">
+                        <img src="./assets/img/partner1.png" alt="" class="partner-img">
+                        <img src="./assets/img/partner2.png" alt="" class="partner-img">
+                        <img src="./assets/img/partner3.png" alt="" class="partner-img">
+                        <img src="./assets/img/partner4.png" alt="" class="partner-img">
+                        <img src="./assets/img/partner5.png" alt="" class="partner-img">
+                        <img src="./assets/img/partner6.png" alt="" class="partner-img">
+                        <img src="./assets/img/partner8.png" alt="" class="partner-img">
+                        <img src="./assets/img/partner9.png" alt="" class="partner-img">
+                        <img src="./assets/img/partner10.png" alt="" class="partner-img">
+                        <img src="./assets/img/partner11.png" alt="" class="partner-img">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ====== Individual ====== -->
+            <div class="body-item individual">
+                <!-- Libary -->
+                <div class="libary mt-50">
+                    <div class="libary-title-wrap mb-25">
+                        <h1 class="libary-title">Thư viện</h1>
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <div class="libary-list-singers">
+                        <div class="libary-item-singer">
+                            <div class="libary-singer-img-container">
+                                <div class="wrap-singer--img">
+                                    <img class = "avt-img"src="./assets/img/libary1.jpg" alt="">
+                                </div>
+                                <i class="icon-random fas fa-random"></i>                            
+                            </div>
+                            <a href = "#"class="libary-singer-name">MIN</a>
+                        </div>
+
+                        <div class="libary-item-singer">
+                            <div class="libary-singer-img-container">
+                                <div class="wrap-singer--img">
+                                    <img class = "avt-img"src="./assets/img/libary2.jpg" alt="">
+                                </div>
+                                <i class="icon-random fas fa-random"></i>                            
+                            </div>
+                            <a href = "#"class="libary-singer-name">Khắc Việt</a>
+                        </div>
+
+                        <div class="libary-item-singer">
+                            <div class="libary-singer-img-container">
+                                <div class="wrap-singer--img">
+                                    <img class = "avt-img"src="./assets/img/libary3.jpg" alt="">
+                                </div>
+                                <i class="icon-random fas fa-random"></i>                            
+                            </div>
+                            <a href = "#"class="libary-singer-name">Lê Bảo Bình</a>
+                        </div>
+
+                        <div class="libary-item-singer">
+                            <i class="icon-arrow--right fa-solid fa-arrow-right"></i>
+                            <a href = "#"class="libary-singer-name">Xem tất cả</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Playlist -->
+                <div class="playlist mt-50">
+                    <div class="playlist-title-wrap">
+                        <h1 class="playlist-title">PLAYLIST</h1>
+                        <i class="icon-plus fa-solid fa-plus"></i>
+                    </div>
+
+                    <div class="playlist-involved mt-50">
+                        <ul class="playlist-involved-list">
+                            <li class="playlist-involved-item" style="margin-left: -50px;">BÀI HÁT</li>
+                            <li class="playlist-involved-item">PODCAST</li>
+                            <li class="playlist-involved-item">ALBUM</li>
+                            <li class="playlist-involved-item">MV</li>
+                        </ul>
+
+                        <div class="playlist-individual mt-18">
+                            <div class="playlist-individual-actions">
+                                <p class="playlist-individual--title active">YÊU THÍCH</p>
+                                <p class="playlist-individual--title">ĐÃ TẢI LÊN</p>
+                            </div>
+
+                           
+                            <table class="playlist-list-container" style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 45%">BÀI HÁT</th>
+                                        <th style="width: 45%">ALBUM</th>
+                                        <th style="width: 10%">THỜI GIAN</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="listSong">
+                                    <!-- <tr class="content">
+                                        <td class="song">
+                                            <i class="fa-solid fa-music"></i>
+                                            <img src="./assets/img/playlist1.jpg" class="song-img">
+                                            <div class="playlist-info-song">
+                                                <h3 class="name-song">Cuộc sống em ổn không</h3>
+                                                <p class="name-singer">Anh Tú</p>
+                                            </div>
+                                        </td>
+                                        <td class="album">
+                                            Cuộc sống em ổn không
+                                        </td>
+                                        <td class="time">
+                                            <i class="icon-like fa-solid fa-heart"></i>
+                                            <p class="time-song">5:44</p>
+                                        </td>
+                                    </tr> -->
+                                </tbody>
+
+                            </table>
+                       
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- MUSIC BAR -->
+        <div class="music--bar">
+            <div class="info-song">                              
+                <div class="info-song-item">
+                    <img src="./assets/img/new_song1.jpg" alt="" class="info-song--img">
+                    <div class="info-song--detail">
+                        <h4 class="info-song--name">Chuyện Về Người Con Gái</h4>
+                        <p class="info-song-singer--name">Phương Thanh</p>
+                    </div>
+                </div>
+                <div class="info-song--extension">
+                    <i class="icon-favourite fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>   
+      
+            </div>
+            <div class="control-wrap">
+                <div class="control">
+                    <div class="btn btn-repeat">
+                    <i class="fas fa-redo"></i>
+                    </div>
+                    <div class="btn btn-prev">
+                    <i class="fas fa-step-backward"></i>
+                    </div>
+                    <div class="btn btn-toggle-play">
+                        <i class="fas fa-pause icon-pause"></i>
+                        <i class="fas fa-play icon-play"></i>
+                    </div>
+                    <div class="btn btn-next">
+                    <i class="fas fa-step-forward"></i>
+                    </div>
+                    <div class="btn btn-random">
+                    <i class="fas fa-random"></i>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <span class="time_song current-time">00:00</span>
+                    <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+                    <span class="time_song duration-time">03:22</span>
+                </div>
+                <audio id="audio" src=""></audio>
+        
+            </div>
+            <div class="extension">
+                <span class="icon-mv">MV</span>
+                <i class="icon-extension ti-microphone"></i>
+                <i class="icon-extension ti-new-window"></i>
+                <div class="volume-wrap">
+                    <div class="volume-icon-wrap">
+                        <i class="icon-extension icon-volume-mute fa-solid fa-volume-xmark"></i>
+                        <i class="icon-extension icon-volume ti-volume"></i>
+                    </div>
+                    <input id="progress2" class="progress" type="range" value="0" step="1" min="0" max="100">
+                </div>
+            </div>
+        </div>
+
+        
+                  
+    </div>
+    <script src = "assets/myjavascript.js"></script>
+</body>
+</html>

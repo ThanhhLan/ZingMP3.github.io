@@ -1,0 +1,59 @@
+.grid{
+    width: 100%;
+    display: block;
+    padding: 0; 
+}
+
+.grid.wide{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap:wrap;
+    max-width: 100%;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+.col{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.c-0{
+    display: none;
+}
+
+.c-3{
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.c-4{
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+
+.c-8{
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+}
+
+.c-9{
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+.c-5--1{
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.c-5--2{
+    flex: 0 0 80%;
+    max-width: 80%;
+}
+
+
