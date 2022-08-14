@@ -1,3 +1,10 @@
 @media (max-width: 739px){
-    
+
+}
+
+@media (max-width: 1340px){
+    .body{
+        max-width: 1060px;
+        padding: 0 47px;
+    }
 }
