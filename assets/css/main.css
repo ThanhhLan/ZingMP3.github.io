@@ -305,6 +305,9 @@ html{
     cursor: pointer;
 }
 
+.notification{
+    display: none;
+}
 
 /* ####### Individual ####### */
 /* Libary */
@@ -328,6 +331,9 @@ html{
 
 .libary-list-singers{
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     margin-left: -30px;
 }
 
@@ -820,11 +826,12 @@ th, td{
 
 
 /* Choices */
+.lists-choice{
+    display: flex;
+}
 .choice-item{
     width: 180px;
     padding: 0 6px 0 5px;
-
-
 }
 
 .choice-link--img:hover .choice-hover{
@@ -958,6 +965,8 @@ th, td{
 
 
 /*  RADIO */
+
+
 .radio-list{
     display: flex;
     margin-left: -12px;
@@ -1371,7 +1380,7 @@ th, td{
     top: 20px;
     right: 69px;
     z-index: 1000;
-    padding-bottom: 10px;
+
 }
 
 .toast{
@@ -1475,7 +1484,7 @@ th, td{
     width: 800px;
     height: 400px;
     margin-top: 60px;
-    background-color: #fff;
+    /* background-color: #fff; */
     animation: modalFadeIn ease-in 1s;
 }
 
@@ -1502,6 +1511,7 @@ th, td{
 .close-title{
     padding-right: 5px;
 }
+
 
 
 .advertisement-img{

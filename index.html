@@ -33,7 +33,7 @@
                         <i class="header__menu-icon fa-solid fa-user"></i>                        
                         <a><span class="header__menu-title">Cá nhân</span></a>
                     </div>
-                    <div class="header__menu-item">
+                    <div class="header__menu-item js__toast">
                         <i class="header__menu-icon fa-solid fa-chart-line"></i>
                         <a><span class="header__menu-title">Zingchart</span></a>
                     </div>
@@ -136,6 +136,9 @@
                         <img src="./assets/img/avt.jpg" alt="" class="avt">
                     </div>
                 </div>
+                <div class="notification">
+                    <i class="icon-bell fa-solid fa-bell"></i>
+                </div>
             </div>
 
             <!-- Toast Message -->
@@ -194,102 +197,100 @@
                 </div>
 
                 <!-- Maybe you want to hear -->
-                <div class="maybe--hear choices mt-50">
+                <div class="maybe--hear choices mt-50" id="sroll-X">
                     <h2 class="mb-25 title-header">Có Thể Bạn Muốn Nghe</h2>
                     <div class="lists-choice mb-25">
-                    <div class="grid row">
-                            <div class="choice-item">
-                                <div class="choice-link--img">
-                                    <a><img class="choice-img" src="./assets/img/Maybe1.jpg"></img></a>
-                                    <div class="choice-hover">
-                                        <i class="fa-solid fa-heart"></i>
-                                        <i class="fa-solid fa-circle-play"></i>
-                                        <i class="fa-solid fa-ellipsis"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="choice-info">
-                                    <a href="" class="choice-title-link">
-                                        <h3 class="choice-title">Dance Pop Today</h3>
-                                    </a>
-                                    <p class="choice-description">Mabel, Becky Hill, Sigrid, Ellie Goulding 2K người yêu thích</p>
-                                </div>
-                            </div>
-
-                            <div class="choice-item">
-                                <div class="choice-link--img">
-                                    <a><img class="choice-img" src="./assets/img/Maybe2.jpg"></img></a>
-                                    <div class="choice-hover">
-                                        <i class="fa-solid fa-heart"></i>
-                                        <i class="fa-solid fa-circle-play"></i>
-                                        <i class="fa-solid fa-ellipsis"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="choice-info">
-                                    <a href="" class="choice-title-link">
-                                        <h3 class="choice-title">Rap Việt cũ mà hay</h3>
-                                    </a>
-                                    <p class="choice-description">Rhymastic, LK, Yanbi, Kimmese 22K người thích</p>
-                                </div>
-                            </div>
-
-                            <div class="choice-item">
-                                <div class="choice-link--img">
-                                    <a><img class="choice-img" src="./assets/img/Maybe3.jpg"></img></a>
-                                    <div class="choice-hover">
-                                        <i class="fa-solid fa-heart"></i>
-                                        <i class="fa-solid fa-circle-play"></i>
-                                        <i class="fa-solid fa-ellipsis"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="choice-info">
-                                    <a href="" class="choice-title-link">
-                                        <h3 class="choice-title">Top 100 EDM</h3>
-                                    </a>
-                                    <p class="choice-description">Thả mình cùng những giai điệu V-Pop nhẹ nhàng</p>
-                                </div>
-                            </div>
-
-                            <div class="choice-item">
-                                <div class="choice-link--img">
-                                    <a><img class="choice-img" src="./assets/img/Maybe4.jpg"></img></a>
-                                    <div class="choice-hover">
-                                        <i class="fa-solid fa-heart"></i>
-                                        <i class="fa-solid fa-circle-play"></i>
-                                        <i class="fa-solid fa-ellipsis"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="choice-info">
-                                    <a href="" class="choice-title-link">
-                                        <h3 class="choice-title">10s Pop Hits</h3>
-                                    </a>
-                                    <p class="choice-description">Katy Perry, Taylor Swift, Justin Bieber, Ariana Grand 2K người yêu thích</p>
-                                </div>
-                            </div>
-
-                            <div class="choice-item">
-                                <div class="choice-link--img">
-                                    <a><img class="choice-img" src="./assets/img/Maybe5.jpg"></img></a>
-                                    <div class="choice-hover">
-                                        <i class="fa-solid fa-heart"></i>
-                                        <i class="fa-solid fa-circle-play"></i>
-                                        <i class="fa-solid fa-ellipsis"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="choice-info">
-                                    <a href="" class="choice-title-link">
-                                        <h3 class="choice-title">Rock 50: Zing Choice</h3>
-                                    </a>
-                                    <p class="choice-description">Nothing But Thieves, Bức Tường, 828 nguoiwf yêu thích</p>
+                    
+                        <div class="choice-item mb-25">
+                            <div class="choice-link--img">
+                                <a><img class="choice-img" src="./assets/img/Maybe1.jpg"></img></a>
+                                <div class="choice-hover">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-circle-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
                                 </div>
                             </div>
                             
+                            <div class="choice-info">
+                                <a href="" class="choice-title-link">
+                                    <h3 class="choice-title">Dance Pop Today</h3>
+                                </a>
+                                <p class="choice-description">Mabel, Becky Hill, Sigrid, Ellie Goulding 2K người yêu thích</p>
+                            </div>
+                        </div>
+
+                        <div class="choice-item mb-25">
+                            <div class="choice-link--img">
+                                <a><img class="choice-img" src="./assets/img/Maybe2.jpg"></img></a>
+                                <div class="choice-hover">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-circle-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </div>
                             
-                    </div>
+                            <div class="choice-info">
+                                <a href="" class="choice-title-link">
+                                    <h3 class="choice-title">Rap Việt cũ mà hay</h3>
+                                </a>
+                                <p class="choice-description">Rhymastic, LK, Yanbi, Kimmese 22K người thích</p>
+                            </div>
+                        </div>
+
+                        <div class="choice-item mb-25">
+                            <div class="choice-link--img">
+                                <a><img class="choice-img" src="./assets/img/Maybe3.jpg"></img></a>
+                                <div class="choice-hover">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-circle-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="choice-info">
+                                <a href="" class="choice-title-link">
+                                    <h3 class="choice-title">Top 100 EDM</h3>
+                                </a>
+                                <p class="choice-description">Thả mình cùng những giai điệu V-Pop nhẹ nhàng</p>
+                            </div>
+                        </div>
+
+                        <div class="choice-item mb-25">
+                            <div class="choice-link--img">
+                                <a><img class="choice-img" src="./assets/img/Maybe4.jpg"></img></a>
+                                <div class="choice-hover">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-circle-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="choice-info">
+                                <a href="" class="choice-title-link">
+                                    <h3 class="choice-title">10s Pop Hits</h3>
+                                </a>
+                                <p class="choice-description">Katy Perry, Taylor Swift, Justin Bieber, Ariana Grand 2K người yêu thích</p>
+                            </div>
+                        </div>
+
+                        <div class="choice-item mb-25">
+                            <div class="choice-link--img">
+                                <a><img class="choice-img" src="./assets/img/Maybe5.jpg"></img></a>
+                                <div class="choice-hover">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-circle-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="choice-info">
+                                <a href="" class="choice-title-link">
+                                    <h3 class="choice-title">Rock 50: Zing Choice</h3>
+                                </a>
+                                <p class="choice-description">Nothing But Thieves, Bức Tường, 828 người yêu thích</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -559,99 +560,97 @@
                 <div class="choices mt-50">
                     <h2 class="mb-25 title-header">Lựa Chọn Hôm Nay</h2>
                     <div class="lists-choice mb-25">
-                    <div class="grid row">
-                            <div class="choice-item">
-                                <div class="choice-link--img">
-                                    <a><img class="choice-img" src="./assets/img/choice1.jpg"></img></a>
-                                    <div class="choice-hover">
-                                        <i class="fa-solid fa-heart"></i>
-                                        <i class="fa-solid fa-circle-play"></i>
-                                        <i class="fa-solid fa-ellipsis"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="choice-info">
-                                    <a href="" class="choice-title-link">
-                                        <h3 class="choice-title">K-Pop Happy Whistle</h3>
-                                    </a>
-                                    <p class="choice-description">Cuốn theo những giai điệu húyt sáo độc đáo trong K-Pop Happy Whistle</p>
-                                </div>
-                            </div>
-
-                            <div class="choice-item">
-                                <div class="choice-link--img">
-                                    <a><img class="choice-img" src="./assets/img/choice2.jpg"></img></a>
-                                    <div class="choice-hover">
-                                        <i class="fa-solid fa-heart"></i>
-                                        <i class="fa-solid fa-circle-play"></i>
-                                        <i class="fa-solid fa-ellipsis"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="choice-info">
-                                    <a href="" class="choice-title-link">
-                                        <h3 class="choice-title">Nhạc TikTok hay 2022</h3>
-                                    </a>
-                                    <p class="choice-description">Cùng thư giãn với những bản nhạc TikTok hay nhất 2022</p>
-                                </div>
-                            </div>
-
-                            <div class="choice-item">
-                                <div class="choice-link--img">
-                                    <a><img class="choice-img" src="./assets/img/choice3.jpg"></img></a>
-                                    <div class="choice-hover">
-                                        <i class="fa-solid fa-heart"></i>
-                                        <i class="fa-solid fa-circle-play"></i>
-                                        <i class="fa-solid fa-ellipsis"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="choice-info">
-                                    <a href="" class="choice-title-link">
-                                        <h3 class="choice-title">Nhẹ nhàng cùng V-Pop</h3>
-                                    </a>
-                                    <p class="choice-description">Thả mình cùng những giai điệu V-Pop nhẹ nhàng</p>
-                                </div>
-                            </div>
-
-                            <div class="choice-item">
-                                <div class="choice-link--img">
-                                    <a><img class="choice-img" src="./assets/img/choice4.jpg"></img></a>
-                                    <div class="choice-hover">
-                                        <i class="fa-solid fa-heart"></i>
-                                        <i class="fa-solid fa-circle-play"></i>
-                                        <i class="fa-solid fa-ellipsis"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="choice-info">
-                                    <a href="" class="choice-title-link">
-                                        <h3 class="choice-title">Summer Hits</h3>
-                                    </a>
-                                    <p class="choice-description">Feel the heat cùng những bản Hits Summer nóng bỏng</p>
-                                </div>
-                            </div>
-
-                            <div class="choice-item">
-                                <div class="choice-link--img">
-                                    <a><img class="choice-img" src="./assets/img/choice5.jpg"></img></a>
-                                    <div class="choice-hover">
-                                        <i class="fa-solid fa-heart"></i>
-                                        <i class="fa-solid fa-circle-play"></i>
-                                        <i class="fa-solid fa-ellipsis"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="choice-info">
-                                    <a href="" class="choice-title-link">
-                                        <h3 class="choice-title">Hot Hits VietNam</h3>
-                                    </a>
-                                    <p class="choice-description">Hits nổi nhất tại Việt Nam từ Đông sang Tây có đủ các thể loại</p>
+                    
+                        <div class="choice-item mb-25">
+                            <div class="choice-link--img">
+                                <a><img class="choice-img" src="./assets/img/choice1.jpg"></img></a>
+                                <div class="choice-hover">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-circle-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
                                 </div>
                             </div>
                             
+                            <div class="choice-info">
+                                <a href="" class="choice-title-link">
+                                    <h3 class="choice-title">K-Pop Happy Whistle</h3>
+                                </a>
+                                <p class="choice-description">Cuốn theo những giai điệu húyt sáo độc đáo trong K-Pop Happy Whistle</p>
+                            </div>
+                        </div>
+
+                        <div class="choice-item mb-25">
+                            <div class="choice-link--img">
+                                <a><img class="choice-img" src="./assets/img/choice2.jpg"></img></a>
+                                <div class="choice-hover">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-circle-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </div>
                             
-                    </div>
+                            <div class="choice-info">
+                                <a href="" class="choice-title-link">
+                                    <h3 class="choice-title">Nhạc TikTok hay 2022</h3>
+                                </a>
+                                <p class="choice-description">Cùng thư giãn với những bản nhạc TikTok hay nhất 2022</p>
+                            </div>
+                        </div>
+
+                        <div class="choice-item mb-25">
+                            <div class="choice-link--img">
+                                <a><img class="choice-img" src="./assets/img/choice3.jpg"></img></a>
+                                <div class="choice-hover">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-circle-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="choice-info">
+                                <a href="" class="choice-title-link">
+                                    <h3 class="choice-title">Nhẹ nhàng cùng V-Pop</h3>
+                                </a>
+                                <p class="choice-description">Thả mình cùng những giai điệu V-Pop nhẹ nhàng</p>
+                            </div>
+                        </div>
+
+                        <div class="choice-item mb-25">
+                            <div class="choice-link--img">
+                                <a><img class="choice-img" src="./assets/img/choice4.jpg"></img></a>
+                                <div class="choice-hover">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-circle-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="choice-info">
+                                <a href="" class="choice-title-link">
+                                    <h3 class="choice-title">Summer Hits</h3>
+                                </a>
+                                <p class="choice-description">Feel the heat cùng những bản Hits Summer nóng bỏng</p>
+                            </div>
+                        </div>
+
+                        <div class="choice-item mb-25">
+                            <div class="choice-link--img">
+                                <a><img class="choice-img" src="./assets/img/choice5.jpg"></img></a>
+                                <div class="choice-hover">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-circle-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="choice-info">
+                                <a href="" class="choice-title-link">
+                                    <h3 class="choice-title">Hot Hits VietNam</h3>
+                                </a>
+                                <p class="choice-description">Hits nổi nhất tại Việt Nam từ Đông sang Tây có đủ các thể loại</p>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
 
@@ -818,7 +817,7 @@
                 <div class="favorite-artist-container mt-50">
                     <h2 class="mb-25 title-header">Nghệ Sĩ Yêu Thích</h2>
                     <div class="favorite-artist-list">
-                        <div class="favorite-artist-item">
+                        <div class="favorite-artist-item mb-25">
                             <div class="favorite-artist-img-wrap">
                                 <img src="./assets/img/artist_A.jpg" alt="" class="favorite-artist-img">
                             </div>
@@ -834,7 +833,7 @@
                             </div>
                         </div>
 
-                        <div class="favorite-artist-item">
+                        <div class="favorite-artist-item mb-25">
                             <div class="favorite-artist-img-wrap">
                                 <img src="./assets/img/artist_B.jpg" alt="" class="favorite-artist-img">
                             </div>
@@ -850,7 +849,7 @@
                             </div>
                         </div>
 
-                        <div class="favorite-artist-item">
+                        <div class="favorite-artist-item mb-25">
                             <div class="favorite-artist-img-wrap">
                                 <img src="./assets/img/artist_C.jpg" alt="" class="favorite-artist-img">
                             </div>
@@ -866,7 +865,7 @@
                             </div>
                         </div>
 
-                        <div class="favorite-artist-item">
+                        <div class="favorite-artist-item mb-25">
                             <div class="favorite-artist-img-wrap">
                                 <img src="./assets/img/artist_D.jpg" alt="" class="favorite-artist-img">
                             </div>
@@ -882,7 +881,7 @@
                             </div>
                         </div>
 
-                        <div class="favorite-artist-item">
+                        <div class="favorite-artist-item mb-25">
                             <div class="favorite-artist-img-wrap">
                                 <img src="./assets/img/artist_E.jpg" alt="" class="favorite-artist-img">
                             </div>
@@ -992,8 +991,8 @@
                                 <thead>
                                     <tr>
                                         <th style="width: 45%">BÀI HÁT</th>
-                                        <th style="width: 45%">ALBUM</th>
-                                        <th style="width: 10%">THỜI GIAN</th>
+                                        <th class = "title-table" style="width: 45%">ALBUM</th>
+                                        <th class = "title-table" style="width: 10%">THỜI GIAN</th>
                                     </tr>
                                 </thead>
 
@@ -1095,7 +1094,7 @@
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                     <div class="advertisement-content">
-                        <div style = "background-image: url('./assets/img/entertainment.jpg')"class="advertisement-img">
+                        <div style = "background-image: url(./assets/img/entertainment.jpg)"class="advertisement-img"></div>
                     </div>
                 </div>
             </div>

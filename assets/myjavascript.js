@@ -437,9 +437,6 @@ const app = {
         });
 
 
-        setInterval(function(){
-            
-        })
     },
 
 
