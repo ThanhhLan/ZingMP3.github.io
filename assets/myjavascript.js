@@ -44,6 +44,9 @@ const volumeProgress = $('#progress2')
 // toast
 const mainToast = $('#toast')
 
+// Quảng cáo
+const advertisement = $('.advertisement');
+const advertisementClose = $('.advertisement-close');
 
 const app = {
     
@@ -337,6 +340,8 @@ const app = {
                 _this.showToast();
             }
         })
+
+
     },
 
     loadCurrentSong: function(){        
@@ -391,10 +396,10 @@ const app = {
         currentTime.textContent = this.formatTime(audio.currentTime)
     },
 
+
     displayDurationTime: function(){
         durationTime.textContent = this.currentSong.duration;
     },
-
 
 
     // ------------- Hiệu ứng slideshow ------------- 
@@ -553,6 +558,21 @@ const app = {
     },    
  
 
+    
+    // hiển thị quảng cáo  
+    showAdvertisement: function(){
+        advertisement.classList.add('open');
+        const autoTime = setInterval(function(){
+            advertisement.classList.remove('open');
+        }, 10000);
+
+        advertisementClose.onclick = function(){
+            advertisement.classList.remove('open');
+            clearInterval(autoTime);
+        }  
+
+    }, 
+
     start: function (){
         this.loadConfig();
         this.defineProperties(); // định nghĩa các thuộc tính cho object
@@ -566,6 +586,8 @@ const app = {
         this.tabUi();
         this.makeSlides(3);
         this.zingChart();
+        this.showAdvertisement();
+
         
 
         //hiển thị trạng thái ban đầu của btn Repeat, Random

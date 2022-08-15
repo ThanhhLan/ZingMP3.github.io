@@ -61,7 +61,7 @@ html{
     max-width: 210px;
     width: 100%;
     padding-left: 35px;
-    max-height: 575px;
+    height: 575px;
     z-index: 100;
     overflow: hidden;
 }
@@ -298,6 +298,12 @@ html{
     right: center;
 }
 
+.avt{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
 
 /* ####### Individual ####### */
@@ -733,9 +739,6 @@ th, td{
 
 }
 
-.icon-ellipsis{
-    margin-left: 230px;
-}
 
 .new__release-item-wrap:hover .new__release-item--hover{
     display: block;
@@ -1426,6 +1429,87 @@ th, td{
     margin: 0 0 34px 8px;
     font-size: 1.8rem;
     cursor: pointer
+}
+
+
+/* Banner */
+@keyframes modalFadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.advertisement{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1001;
+    display: none;
+}
+
+.advertisement.open{
+    display: block;
+}
+
+.modal-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+
+}
+
+.modal-content{
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 400px;
+    margin-top: 60px;
+    background-color: #fff;
+    animation: modalFadeIn ease-in 1s;
+}
+
+.advertisement-body{
+    position: absolute;    
+}
+
+.advertisement-close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:rgb(204, 248, 9);
+    float: right;
+    font-size: 1.5rem;
+    padding: 5px 8px;
+    background-color: rgb(85, 76, 76);
+    cursor: pointer;
+}
+
+.advertisement-close:hover{
+    background-color: rgb(117, 108, 108);
+}
+
+.close-title{
+    padding-right: 5px;
+}
+
+
+.advertisement-img{
+    width: 800px;
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 

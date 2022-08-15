@@ -107,33 +107,33 @@
                         <i class="fa-solid fa-arrow-right" style="padding-left: 20px;"></i>
                     </div>
                     <div class="search__box">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-magnifying-glass icon-search"></i>
                         <input type="text" class="search" placeholder="Tìm kiếm bài hát, nghệ sĩ, lời bài hát..." autocomplete="off">
                     </div>
                 </div>
 
                 <div class="function">
-                    <div class="function__item js__toast">
+                    <div class="function__item function__item-none js__toast">
                         <i class="function__icon fa-solid fa-archway" style="color: rgb(126, 218, 210);"></i>
                         <p class="function__comment">Chủ đề</p>
                     </div>
 
-                    <div class="function__item js__toast">
+                    <div class="function__item function__item-none js__toast">
                         <i class="function__icon fa-solid fa-fire"style="color: rgb(206, 88, 52);"></i>
                         <p class="function__comment">Nâng cấp VIP</p>
                     </div>
 
-                    <div class="function__item js__toast">
+                    <div class="function__item function__item-none js__toast">
                         <i class="function__icon fa-solid fa-upload" style="color: rgb(146, 221, 103);"></i>
                         <p class="function__comment">Tải lên</p>
                     </div>
 
-                    <div class="function__item js__toast">
+                    <div class="function__item function__item-none js__toast">
                         <i class="function__icon fa-solid fa-gear" style="color: rgb(194, 154, 240);"></i>
                         <p class="function__comment">Cài đặt</p>
                     </div>
                     <div class="function__item js__toast">
-                        <i class="function__icon fa-solid fa-user" style="background-color: rgb(162, 177, 192);"></i>
+                        <img src="./assets/img/avt.jpg" alt="" class="avt">
                     </div>
                 </div>
             </div>
@@ -153,7 +153,8 @@
                 </div> -->
             </div>
 
-            <!-- ====== Discover ====== -->
+            <div class="body-list">
+                <!-- ====== Discover ====== -->
             <div class="body-item discover active">
                 
                 <!-- Slide -->
@@ -1023,6 +1024,7 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
 
 
@@ -1038,13 +1040,13 @@
                 </div>
                 <div class="info-song--extension">
                     <i class="icon-favourite fa-solid fa-heart"></i>
-                    <i class="fa-solid fa-ellipsis"></i>
+                    <i class="fa-solid fa-ellipsis icon-ellipsis"></i>
                 </div>   
       
             </div>
             <div class="control-wrap">
                 <div class="control">
-                    <div class="btn btn-repeat">
+                    <div class="btn btn-repeat btn-none">
                     <i class="fas fa-redo"></i>
                     </div>
                     <div class="btn btn-prev">
@@ -1057,7 +1059,7 @@
                     <div class="btn btn-next">
                     <i class="fas fa-step-forward"></i>
                     </div>
-                    <div class="btn btn-random">
+                    <div class="btn btn-random btn-none">
                     <i class="fas fa-random"></i>
                     </div>
                 </div>
@@ -1083,7 +1085,21 @@
             </div>
         </div>
 
-        
+        <!-- BANNER -->
+        <div class="advertisement">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <div class="advertisement-body">
+                    <div class="advertisement-close">
+                        <p class="close-title">Đóng</p>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="advertisement-content">
+                        <div style = "background-image: url('./assets/img/entertainment.jpg')"class="advertisement-img">
+                    </div>
+                </div>
+            </div>
+        </div>
                   
     </div>
     <script src = "assets/myjavascript.js"></script>
