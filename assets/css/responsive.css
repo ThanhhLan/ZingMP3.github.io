@@ -38,7 +38,7 @@
     }
 
     .slide__item{
-        width: 960px !important;
+        width: 466px !important;
     }
 
     /* music bar */
@@ -90,7 +90,7 @@
         left: 0;
         right: 0;
         width: 100%;
-        padding: 8px 16px 160px 16px;
+        padding: 8px 20px 160px 16px;
         overflow: hidden;
     }
     /* search */
@@ -225,8 +225,6 @@
         height: 50px;
     }
 
-
-    /* body lists */
 
 }
 

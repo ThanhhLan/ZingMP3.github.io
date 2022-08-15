@@ -183,7 +183,7 @@ html{
     position: relative;
     top: 0;
     left: 245px;
-    padding: 0 67px;
+    padding: 0 69px;
     background-color: var(--background-color);
     max-width: 1125px; 
     padding-bottom: 140px;
@@ -579,7 +579,7 @@ th, td{
     display: flex;
     flex-direction: row;
     animation: slide 25s ease-in-out;
-    animation-iteration-count: 2;
+    animation-iteration-count: 1;
     animation-delay: 5s;
     animation-direction: alternate-reverse;
 }
