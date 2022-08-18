@@ -322,7 +322,8 @@ const app = {
         // tăng giảm âm lượng
         volumeProgress.onchange = function(e){
             _this.volume = e.target.value;
-            audio.volume = e.target.value/100
+            audio.volume = e.target.value/100;
+            _this.setConfig('isMute', _this.isMute);
             if(e.target.value == 0){
                 player.classList.add('active');
                 _this.isMute = true;
@@ -331,6 +332,7 @@ const app = {
                 player.classList.remove('active');
                 _this.isMute = false;
             }
+
         }
 
 
