@@ -129,9 +129,6 @@
         top: 10px;
     }
 
-    .discover, .individual{
-        /* display: none !important; */
-    }
 
     .notification{
         display: block;
@@ -182,15 +179,18 @@
     }
 
     .image-big-wrap{
-        max-width: 110px;
-        max-height: 110px;
+        width: 110px;
+        height: 110px;
+        overflow: hidden;
+        border-radius: 50%;    
         
     }
     
     .radio-img--big{ 
         width: 110px;
         height: 110px;
-            
+        overflow: hidden;
+        border-radius: 50%;    
     }
 
     .album, .time, .title-table{

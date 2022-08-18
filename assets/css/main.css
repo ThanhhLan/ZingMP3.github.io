@@ -730,6 +730,7 @@ th, td{
     color: var(--text-color);
     font-size: 1.6rem;
     display: flex;
+    justify-content: space-between;
     padding-left: 27px;
     background-color: rgba(196, 192, 192, 0.205);
     width: 280px;
@@ -742,7 +743,6 @@ th, td{
 
 .new__release-item--hover i{
     margin-top: 20px;
-
 }
 
 
@@ -976,6 +976,7 @@ th, td{
     width: 124px;
     text-align: center;
     padding-left: 12px;
+    
 }
 
 .radio-image-show{
