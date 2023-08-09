@@ -7,6 +7,8 @@
         right: 0;
         height: 60px !important;
         max-width: 100%;
+        /* max-width: 100%; */
+
     }
 
     .header__logo,.split, .header__menu-wrap,.header__radio-live{
